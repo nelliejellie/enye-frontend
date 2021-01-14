@@ -11,7 +11,7 @@ const Pagination = ({profilePerPage, totalPages, paginate}) => {
         <div className='pagination'>
             {
                 pageNumbers.map(number=>(
-                    <h2 key={number} className='paginatedNumbers'><a href='#' onClick={()=>{paginate(number)}}>{number}</a></h2>
+                    <h2 key={number} className='paginatedNumbers'><a href='#' onClick={()=>{paginate(number)}} key={number}>{number}</a></h2>
                 ))
             }
         </div>
