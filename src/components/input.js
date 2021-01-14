@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import {FaSearch} from "react-icons/fa";
 
 const Input = (props) => {
     const [input, setInput] = useState('')
@@ -11,12 +12,10 @@ const Input = (props) => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <label>
-                Name:
-                <input type="text" value={input} onChange={e => setInput(e.target.value)} placeholder='search by username'/>
-                </label>
-                <input type="submit" value="Submit" />
+                <input type="text" value={input} onChange={e => setInput(e.target.value)} placeholder='search by username' className='inputData'/>
+                <input type="submit" value="Submit" className='submitData'/>
             </form>
+            
         </div>
     )
 }
